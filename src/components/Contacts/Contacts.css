@@ -1,0 +1,62 @@
+.contacts {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.icon:hover {
+  color: #0056b3;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  margin-right: 5px;
+  color: #007bff;
+}
+
+.search-container input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.contact-item {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-item:hover {
+  background-color: #e1e1e1;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #007bff; /* Highlight color for searched names */
+}

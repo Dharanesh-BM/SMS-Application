@@ -1,0 +1,33 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.logged-in-content {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.contacts {
+  margin-right: 20px;
+}
+
+.chatbox {
+  flex-grow: 1;
+}

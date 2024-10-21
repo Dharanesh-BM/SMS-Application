@@ -1,0 +1,80 @@
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.received {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+.message-content.sent {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+}
+
+.message-content.received {
+  background-color: #e1e1e1;
+  color: black;
+  margin-right: auto;
+}
+
+.message-time {
+  font-size: 10px;
+  color: #edd6d6;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.reaction-picker {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 120px;
+  animation: pop-up 0.3s ease-in-out;
+}
+
+.reaction-picker span {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.message-reaction {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Pop-up animation for reaction picker */
+@keyframes pop-up {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
