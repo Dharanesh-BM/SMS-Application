@@ -2,11 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
-const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server); // Ensure you instantiate with 'new Server()'
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -32,19 +30,6 @@ const UserSchema = new mongoose.Schema({
 // Create a model based on the schema
 const UserModel = mongoose.model('users', UserSchema);
 
-// Socket.IO setup
-io.on('connection', (socket) => {
-    console.log('A user connected');
-
-    socket.on('sendMessage', (message) => {
-        // Broadcast message to all clients except the sender
-        socket.broadcast.emit('receiveMessage', message);
-    });
-
-    socket.on('disconnect', () => {
-        console.log('User disconnected');
-    });
-});
 
 // POST request for user registration
 // Modify the registration endpoint
@@ -135,6 +120,6 @@ const userSchema = new mongoose.Schema({
   });
   
 // Start the server
-server.listen(1846, () => {
+app.listen(1846, () => {
     console.log("Server is running on http://localhost:1846/");
 });
